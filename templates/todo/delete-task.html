@@ -1,0 +1,14 @@
+{% extends "base/base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Deleting : {{ object.title }}</h1>
+  <form action="" method="post">
+{{ form|crispy }}
+    {% csrf_token %}
+    <button type="submit" class="btn btn-outline-success">Delete</button>
+
+    </form>
+</div>
+{% endblock %}
